@@ -1,6 +1,6 @@
 import React from 'react';
 
-import profileImage from '../../assets/abhiport.jpg'; // Replace with your actual image path
+import profileImage from '../../assets/abhiport.png'; // Replace with your actual image path
 import cvFile from '../../assets/updated cv.pdf'; // Replace with your actual CV file
 
 const About = () => {
