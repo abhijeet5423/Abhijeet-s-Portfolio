@@ -1,19 +1,19 @@
 import React from "react";
 
 // Import your images here
-import scorekaroimg from "../../assets/scorekaroproject.png";
+import billingimg from "../../assets/billingsoftware.png";
 import tourismimg from "../../assets/tourismproject.png";
 import diceimg from "../../assets/dicegame.png";
 
 const projectList = [
   {
     id: 1,
-    title: "Scorekaro - Full Stack Web App",
+    title: "Billing Software | MERN Stack",
     description:
-      "A complete MERN application with authentication and CRUD operations. Users can score and record the match ball by ball.",
-    image: scorekaroimg,
-    tech: ["React", "Node.js", "MongoDB"],
-    codeLink: "https://github.com/abhijeet5423/Scoreit-", // ADD YOUR LINK HERE
+      "Developed a full-stack billing and POS software using MongoDB, Express.js, React.js, and Node.js for managing business operations efficiently. Implemented product management, customer management, supplier management, purchase tracking, sales billing, stock management, expense tracking, profit/loss reports, and invoice generation. Added role-based access control, dashboard analytics, GST/non-GST billing, sequential GST invoice numbering, and responsive invoice layouts.",
+    image: billingimg,
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "CSS"],
+    codeLink: "https://billing-software-mvp.vercel.app/admin/dashboard",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const projectList = [
       "A fully responsive tourism website built using pure React and CSS.",
     image: tourismimg,
     tech: ["React", "CSS"],
-    codeLink: "https://github.com/abhijeet5423/Tourme-", // ADD YOUR LINK HERE
+    codeLink: "https://github.com/abhijeet5423/Tourme-",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const projectList = [
       "A mini dice game built to practice JavaScript logic and React integration.",
     image: diceimg,
     tech: ["React", "JavaScript"],
-    codeLink: "https://github.com/abhijeet5423/Dice-game", // ADD YOUR LINK HERE
+    codeLink: "https://github.com/abhijeet5423/Dice-game",
   },
 ];
 
@@ -61,6 +61,14 @@ const Work = () => {
               ))}
             </div>
 
+            {/* DEMO LOGIN ONLY FOR BILLING PROJECT */}
+            {p.id === 1 && (
+              <p className="wrk-demo-login">
+                <strong>Demo Login:</strong> admin@example.com |{" "}
+                <strong>Password:</strong> admin123
+              </p>
+            )}
+
             {/* PROJECT BUTTON */}
             <a
               href={p.codeLink}
@@ -68,7 +76,7 @@ const Work = () => {
               rel="noopener noreferrer"
               className="wrk-btn"
             >
-              View Code
+              {p.id === 1 ? "View Live Project" : "View Code"}
             </a>
           </div>
         ))}
