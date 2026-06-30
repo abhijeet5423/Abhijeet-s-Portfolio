@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
 
         <p className="footer-copy">
-          © 2025 Abhijeet Shukla. All rights reserved.
+          © 2026 Abhijeet Shukla. All rights reserved.
         </p>
       </div>
     </footer>

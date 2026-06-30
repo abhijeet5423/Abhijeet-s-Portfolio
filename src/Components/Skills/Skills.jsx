@@ -20,7 +20,7 @@ const Skills = () => {
     { name: "Tailwind", icon: <SiTailwindcss />, color: "#38bdf8", level: 80 },
     { name: "C++", icon: <SiCplusplus />, color: "#00599C", level: 85 },
     { name: "SQL", icon: <FaDatabase />, color: "#00758F", level: 70 },
-    { name: "DSA", icon: <GiBrain />, color: "#ff69b4", level: 80 },
+    
   ];
 
   const tools = [

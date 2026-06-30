@@ -13,7 +13,7 @@ const About = () => {
         <div className="about-text fade-in">
           <h2>About Me</h2>
           <p>
-            Hi! I'm a passionate Web Developer with experience in building responsive and interactive websites using HTML, CSS, JavaScript, React.js, MongoDb, Nodejs and UI/UX .
+            Hi! I'm a passionate Web Developer with an experience in building responsive and interactive websites using HTML, CSS, JavaScript, React.js, MongoDb, Nodejs and UI/UX .
             I love creating clean and user-friendly interfaces, and I’m constantly exploring new tools and technologies to improve my skills.
           </p>
 
