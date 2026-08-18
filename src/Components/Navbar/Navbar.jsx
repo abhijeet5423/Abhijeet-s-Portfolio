@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -25,27 +25,31 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-   { id: "education", label: "Education" },
-    { id: "work", label: "Projects" },
-    
-     { id: "contact", label: "Contact me" },
+    { id: "about", label: "Intro" },
+    { id: "work", label: "Work" },
+    { id: "skills", label: "Tech" },
+    { id: "education", label: "Journey" },
+    { id: "contact", label: "Contact" },
+  ];
+
+  const socialLinks = [
+    { href: "https://github.com/abhijeet5423", label: "GitHub", icon: <FaGithub /> },
+    {
+      href: "https://www.linkedin.com/in/abhijeetshukla2011",
+      label: "LinkedIn",
+      icon: <FaLinkedin />,
+    },
   ];
 
   return (
     <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
       <div className="navbar-container">
-        {/* Logo */}
-        <div className="logo">
-          <span className="tag">&lt;</span>
-          <span className="name">Abhijeet</span>
-          <span className="tag">/</span>
-          <span className="name">Shukla</span>
-          <span className="tag">&gt;</span>
-        </div>
+        <button className="logo" onClick={() => handleMenuItemClick("about")} type="button">
+          <span className="status-dot"></span>
+          <span className="tag">AS</span>
+          <span className="name">Abhijeet Shukla</span>
+        </button>
 
-        {/* Desktop Menu */}
         <ul className="menu desktop-menu">
           {menuItems.map((item) => (
             <li
@@ -57,31 +61,25 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Desktop Social Icons */}
         <div className="social-icons desktop-icons">
-          <a
-            href="https://github.com/abhijeet5423"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub className="icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/abhijeetshukla2011"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin className="icon" />
-          </a>
+          {socialLinks.map((item) => (
+            <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label} key={item.label}>
+              <span className="icon">{item.icon}</span>
+            </a>
+          ))}
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <div className="menu-toggle mobile-only" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="menu-toggle mobile-only"
+          onClick={() => setIsOpen(!isOpen)}
+          type="button"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
+        >
           {isOpen ? <HiX className="menu-icon" /> : <HiMenu className="menu-icon" />}
-        </div>
+        </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="mobile-menu">
           <ul className="menu">
@@ -93,23 +91,14 @@ const Navbar = () => {
                 <button onClick={() => handleMenuItemClick(item.id)}>{item.label}</button>
               </li>
             ))}
-            <div className="social-icons">
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="icon" />
-              </a>
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className="icon" />
-              </a>
-            </div>
           </ul>
+          <div className="social-icons">
+            {socialLinks.map((item) => (
+              <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label} key={item.label}>
+                <span className="icon">{item.icon}</span>
+              </a>
+            ))}
+          </div>
         </div>
       )}
     </nav>

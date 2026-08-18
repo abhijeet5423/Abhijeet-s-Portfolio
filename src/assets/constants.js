@@ -2,6 +2,50 @@
 import ucerLogo from "./ucerLogo.jpeg";
 import gdgislogo from "./gdgislogo.jpeg";
 import iislogo from "./iislogo.jpeg";
+import billingimg from "./billingsoftware.png";
+import tourismimg from "./tourismproject.png";
+import diceimg from "./dicegame.png";
+
+export const projects = [
+  {
+    id: 1,
+    title: "Billing Software | MERN Stack",
+    eyebrow: "Production dashboard",
+    description:
+      "Developed a full-stack billing and POS software using MongoDB, Express.js, React.js, and Node.js for managing business operations efficiently. Implemented product management, customer management, supplier management, purchase tracking, sales billing, stock management, expense tracking, profit/loss reports, and invoice generation. Added role-based access control, dashboard analytics, GST/non-GST billing, sequential GST invoice numbering, and responsive invoice layouts.",
+    image: billingimg,
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "CSS"],
+    codeLink: "https://billing-software-mvp.vercel.app/admin/dashboard",
+    action: "View Live Project",
+    meta: "MERN / RBAC / GST invoices",
+    demoLogin: "admin@example.com",
+    demoPassword: "admin123",
+  },
+  {
+    id: 2,
+    title: "Tourism Project",
+    eyebrow: "Responsive web experience",
+    description:
+      "A fully responsive tourism website built using pure React and CSS.",
+    image: tourismimg,
+    tech: ["React", "CSS"],
+    codeLink: "https://github.com/abhijeet5423/Tourme-",
+    action: "View Code",
+    meta: "React / CSS / UI",
+  },
+  {
+    id: 3,
+    title: "Mini Dice Game",
+    eyebrow: "Interaction prototype",
+    description:
+      "A mini dice game built to practice JavaScript logic and React integration.",
+    image: diceimg,
+    tech: ["React", "JavaScript"],
+    codeLink: "https://github.com/abhijeet5423/Dice-game",
+    action: "View Code",
+    meta: "React / JavaScript",
+  },
+];
 
   export const education = [
     {
