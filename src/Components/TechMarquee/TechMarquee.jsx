@@ -1,31 +1,28 @@
-const marqueeItems = [
+const coreToolchain = [
   "React.js",
   "Node.js",
-  "MongoDB",
   "Express.js",
-  "JWT",
-  "Tailwind CSS",
+  "MongoDB",
   "JavaScript",
-  "SQL",
-  "Postman",
-  "GitHub",
-  "Figma",
-  "Data Structures",
+  "Tailwind CSS",
+  "REST APIs",
+  "Git",
 ];
 
 const TechMarquee = () => {
-  const items = [...marqueeItems, ...marqueeItems];
-
   return (
-    <section className="tech-marquee" aria-label="Technology marquee">
-      <div className="marquee-track">
-        {items.map((item, index) => (
-          <span className="marquee-item" key={`${item}-${index}`}>
-            {item}
-          </span>
-        ))}
+    <aside className="tech-strip-section reveal-on-scroll" aria-label="Core Technology Summary">
+      <div className="tech-strip-container">
+        <span className="tech-strip-label">CORE TOOLCHAIN</span>
+        <div className="tech-strip-items">
+          {coreToolchain.map((tech) => (
+            <span className="tech-strip-badge" key={tech}>
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
-    </section>
+    </aside>
   );
 };
 

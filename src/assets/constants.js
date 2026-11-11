@@ -8,73 +8,110 @@ import diceimg from "./dicegame.png";
 
 export const projects = [
   {
-    id: 1,
-    title: "Billing Software | MERN Stack",
-    eyebrow: "Production dashboard",
+    id: "01",
+    title: "Billing & POS Management System",
+    eyebrow: "FLAGSHIP CASE STUDY · MERN ARCHITECTURE",
     description:
-      "Developed a full-stack billing and POS software using MongoDB, Express.js, React.js, and Node.js for managing business operations efficiently. Implemented product management, customer management, supplier management, purchase tracking, sales billing, stock management, expense tracking, profit/loss reports, and invoice generation. Added role-based access control, dashboard analytics, GST/non-GST billing, sequential GST invoice numbering, and responsive invoice layouts.",
+      "A full-stack enterprise point-of-sale and business management platform engineered to automate high-throughput retail billing, GST-compliant invoice generation, and real-time inventory tracking.",
+    problem:
+      "Small and mid-sized retail businesses struggle with error-prone manual tax math, untracked inventory shrinkage, fragmented supplier accounts, and slow checkout lines using spreadsheets.",
+    contribution:
+      "Engineered the complete solution from schema design to deployment: structured MongoDB schemas with atomic updates, built Express REST endpoints with JWT role-based access control (RBAC), and developed the responsive React dashboard with printable invoice layouts.",
+    features: [
+      "GST & Non-GST Billing Workflows with sequential GST invoice numbering",
+      "Dynamic Product Management with low-stock threshold alerts",
+      "Customer & Supplier Ledgers with transaction histories and balance tracking",
+      "Role-Based Access Control (RBAC) separating admin controls from cashier operations",
+      "Dashboard Analytics for profit/loss calculation and daily revenue tracking",
+      "Printable, responsive invoice layout generation with HSN/tax breakup",
+    ],
     image: billingimg,
-    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "CSS"],
-    codeLink: "https://billing-software-mvp.vercel.app/admin/dashboard",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "REST APIs"],
+    liveLink: "https://billing-software-mvp.vercel.app/admin/dashboard",
+    codeLink: null,
     action: "View Live Project",
-    meta: "MERN / RBAC / GST invoices",
-    demoLogin: "admin@example.com",
-    demoPassword: "admin123",
+    demoCredentials: {
+      note: "Restricted demo sandbox account for evaluation",
+      email: "admin@example.com",
+      password: "admin123",
+    },
+    featured: true,
   },
   {
-    id: 2,
-    title: "Tourism Project",
-    eyebrow: "Responsive web experience",
+    id: "02",
+    title: "Tourme — Tourism Discovery Web Platform",
+    eyebrow: "RESPONSIVE CLIENT APPLICATION",
     description:
-      "A fully responsive tourism website built using pure React and CSS.",
+      "A fast, responsive travel exploration web platform designed to streamline destination discovery, curated tour package viewing, and interactive trip itinerary planning.",
+    problem:
+      "Travelers frequently face slow, bloated directory platforms with cluttered navigations that break or become unreadable on mobile viewports.",
+    contribution:
+      "Built the client architecture from scratch using pure React and modern CSS, emphasizing responsive visual rhythm, destination catalog filtering, and zero-dependency performance.",
+    features: [
+      "Curated travel destination catalog with visual exploration galleries",
+      "Responsive tour package cards with comprehensive itinerary summaries",
+      "Mobile-first responsive navigation with zero layout shift",
+      "Accessible semantic HTML structure and lightweight styling",
+    ],
     image: tourismimg,
-    tech: ["React", "CSS"],
+    tech: ["React.js", "JavaScript", "CSS3", "Responsive UI"],
+    liveLink: null,
     codeLink: "https://github.com/abhijeet5423/Tourme-",
-    action: "View Code",
-    meta: "React / CSS / UI",
+    action: "View Source Code",
+    demoCredentials: null,
+    featured: false,
   },
   {
-    id: 3,
+    id: "03",
     title: "Mini Dice Game",
-    eyebrow: "Interaction prototype",
+    eyebrow: "STATE MACHINE PROTOTYPE",
     description:
-      "A mini dice game built to practice JavaScript logic and React integration.",
+      "An interactive web application prototype developed to demonstrate deterministic state management, dice roll randomization mechanics, and immediate reactive UI state transitions in React.",
+    problem:
+      "Practicing turn-based state validation, conditional score accumulation, and deterministic game win/loss algorithms purely in React component state.",
+    contribution:
+      "Designed and implemented the core game rules, turn lifecycle, score aggregation engine, boundary conditions, and interactive modal overlays.",
+    features: [
+      "Turn-based dice roll randomization with immediate visual feedback",
+      "Deterministic score accumulation and win/loss validation algorithms",
+      "Interactive rules modal, score resetting, and responsive game canvas",
+    ],
     image: diceimg,
-    tech: ["React", "JavaScript"],
+    tech: ["React.js", "JavaScript", "DOM Mechanics", "State Management"],
+    liveLink: null,
     codeLink: "https://github.com/abhijeet5423/Dice-game",
-    action: "View Code",
-    meta: "React / JavaScript",
+    action: "View Source Code",
+    demoCredentials: null,
+    featured: false,
   },
 ];
 
-  export const education = [
-    {
-      id: 0,
-      img: ucerLogo,
-      school: "United College of Engineering and Research, Greater Noida ",
-      date: "Sept 2021 - July 2025",
-      grade: "6.7 CGPA",
-      desc: "I have completed my Bachelolr's degree (B-tech) in Computer Science from UCER, Greater Noida. During my time at UCER, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Software Engineering. I actively participated in various workshops and technical events, which enhanced my skills and knowledge. My experience  has been instrumental in shaping my technical abilities and professional growth.",
-      degree: "Bachelor in Technology   (B-Tech)",
-    },
-    {
-      id: 1,
-      img: gdgislogo,
-      school: "G.D Goenka International School, Rohtak",
-      date: "April 2020 - March 2021",
-      grade: "70%",
-      desc: "I completed my class 12 education from G.D Goenka International School, Rohtak, under the CBSE board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
-      degree: "CBSE(XII) - PCM with Computer Science",
-    },
-    {
-      id: 2,
-      img: iislogo,
-      school: "Imperial International School, Najibabad",
-      date: "Apr 2018 - March 2019",
-      grade: "82%",
-      desc: "I completed my class 10th education from Imperial International  School, Najibabad, under the CBSE board, where I studied Maths, Science  with Computer Science.",
-      degree: "CBSE(X)",
-    },
-   
-  ];
-  
+export const education = [
+  {
+    id: 0,
+    img: ucerLogo,
+    school: "United College of Engineering and Research, Greater Noida",
+    date: "June 2021 - June 2025",
+    grade: "6.5 CGPA",
+    desc: "Completed Bachelor's degree (B.Tech) in Computer Science from UCER, Greater Noida (affiliated with Dr. APJ Abdul Kalam Technical University). Gained a solid foundation in programming, software engineering, Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, and Web Development.",
+    degree: "Bachelor of Technology (B.Tech) - Computer Science",
+  },
+  {
+    id: 1,
+    img: gdgislogo,
+    school: "G.D Goenka International School, Rohtak",
+    date: "May 2020 - May 2021",
+    grade: "66.8%",
+    desc: "Completed class 12 education from G.D Goenka International School, Rohtak, under the CBSE board, studying Physics, Chemistry, Mathematics (PCM), and Computer Science.",
+    degree: "CBSE (XII) - PCM with Computer Science",
+  },
+  {
+    id: 2,
+    img: iislogo,
+    school: "Imperial International School, Najibabad",
+    date: "July 2018 - July 2019",
+    grade: "83.33%",
+    desc: "Completed class 10 education from Imperial International School, Najibabad, under the CBSE board, studying Mathematics, Science, and Computer Science.",
+    degree: "CBSE (X) - Secondary Education",
+  },
+];

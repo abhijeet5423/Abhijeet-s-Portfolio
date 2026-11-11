@@ -2,52 +2,57 @@ import { education } from "../../assets/constants";
 
 const Education = () => {
   return (
-    <>
-      <section id="education" className="section education-section">
-        <div className="section-heading">
-          <p className="section-kicker">04 / JOURNEY</p>
-          <h2>Education shaped the engineering foundation.</h2>
-          <p>
-            A path through computer science, software development, web systems,
-            and the fundamentals behind dependable product work.
-          </p>
-        </div>
+    <section id="education" className="section education-section" aria-label="Education and Journey">
+      <div className="section-heading reveal-on-scroll">
+        <p className="section-kicker">04 / JOURNEY</p>
+        <h2>Education shaped the engineering foundation.</h2>
+        <p>
+          A rigorous academic background in computer science, software development, web systems,
+          and the engineering principles behind dependable digital products.
+        </p>
+      </div>
 
-        <div className="education-timeline">
-          {education.map((edu, index) => (
-            <article className="education-card" key={edu.id}>
-              <div className="timeline-marker">
-                <span>0{index + 1}</span>
+      <div className="education-timeline">
+        {education.map((edu, index) => (
+          <article className={`education-card reveal-on-scroll stagger-${index + 1}`} key={edu.id}>
+            <div className="education-card-header">
+              <div className="school-logo">
+                <img
+                  src={edu.img}
+                  alt={`${edu.school} official insignia`}
+                  loading="lazy"
+                />
               </div>
-              <div className="education-card-header">
-                <div className="school-logo">
-                  <img src={edu.img} alt={`${edu.school} logo`} loading="lazy" />
+
+              <div className="school-info">
+                <div className="school-info-top">
+                  <span className="mono-label">{edu.date}</span>
+                  <span className="education-index">0{index + 1}</span>
                 </div>
-                <div className="school-info">
-                  <p className="mono-label">{edu.date}</p>
-                  <h3 className="degree">{edu.degree}</h3>
-                  <h4 className="school">{edu.school}</h4>
-                </div>
+                <h3 className="degree">{edu.degree}</h3>
+                <h4 className="school">{edu.school}</h4>
               </div>
-              <p className="grade">Grade: {edu.grade}</p>
+            </div>
+
+            <div className="education-card-body">
+              <div className="education-grade-pill">
+                <strong>Academic Result:</strong> <span>{edu.grade}</span>
+              </div>
               <p className="desc">{edu.desc}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+            </div>
+          </article>
+        ))}
+      </div>
 
-      <section className="section philosophy-section" id="philosophy">
-        <div className="philosophy-card">
-          <p className="section-kicker">ABOUT / PHILOSOPHY</p>
-          <h2>Clean interfaces are only half the job. The system behind them has to hold up.</h2>
-          <p>
-            I care about software that feels clear to use and practical to maintain:
-            thoughtful UI, predictable data flow, responsive layouts, and enough
-            product thinking to make every feature useful.
-          </p>
-        </div>
-      </section>
-    </>
+      <aside className="philosophy-quote-wrapper reveal-on-scroll" aria-label="Engineering Philosophy">
+        <blockquote className="philosophy-quote">
+          &ldquo;Clean interfaces are only half the job. The system behind them has to hold up.&rdquo;
+        </blockquote>
+        <p className="philosophy-author">
+          Thoughtful UI, predictable data flow, responsive layouts, and engineering that makes software dependable.
+        </p>
+      </aside>
+    </section>
   );
 };
 

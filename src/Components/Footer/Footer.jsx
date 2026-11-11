@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const handleScroll = (sectionId) => {
@@ -10,9 +10,9 @@ const Footer = () => {
 
   const navItems = [
     { name: "Intro", id: "about" },
-    { name: "Selected Work", id: "work" },
-    { name: "Technology", id: "skills" },
-    { name: "Journey", id: "education" },
+    { name: "Work", id: "work" },
+    { name: "Tech", id: "skills" },
+    { name: "Journey", id: "experience" },
     { name: "Contact", id: "contact" },
   ];
 
@@ -25,21 +25,24 @@ const Footer = () => {
     {
       icon: <FaLinkedin />,
       label: "LinkedIn",
-      link: "https://www.linkedin.com/in/abhijeet-shukla-8117b4225",
-    },
-    {
-      icon: <FaInstagram />,
-      label: "Instagram",
-      link: "https://www.instagram.com/abhijeet___as/?hl=en",
+      link: "https://www.linkedin.com/in/abhijeetshukla2011",
     },
   ];
 
   return (
-    <footer className="footer">
+    <footer className="footer" aria-label="Site Footer">
       <div className="footer-container">
-        <div>
-          <p className="mono-label">portfolio.shutdown</p>
-          <h2 className="footer-name">Abhijeet Shukla</h2>
+        <div className="footer-brand">
+          <div className="footer-brand-title">
+            <span className="footer-tag">AS</span>
+            <div>
+              <h2 className="footer-name">Abhijeet Shukla</h2>
+              <p className="footer-role">Full-Stack Web Developer</p>
+            </div>
+          </div>
+          <p className="footer-bio">
+            Building reliable, practical web applications with React, Node.js, and modern web architectures.
+          </p>
         </div>
 
         <nav className="footer-nav" aria-label="Footer navigation">
@@ -70,9 +73,14 @@ const Footer = () => {
           ))}
         </div>
 
-        <p className="footer-copy">
-          &copy; 2026 Abhijeet Shukla. Built as a single-page developer workspace.
-        </p>
+        <div className="footer-bottom">
+          <p className="footer-copy">
+            &copy; {new Date().getFullYear()} Abhijeet Shukla. All rights reserved.
+          </p>
+          <p className="footer-built-with">
+            Designed with dark cyber-industrial precision.
+          </p>
+        </div>
       </div>
     </footer>
   );
